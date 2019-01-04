@@ -1,0 +1,79 @@
+
+ // ======== 体测体检详情 ===========
+ .physical-content {
+   background-color: white;
+   border-radius: 10px;
+   min-height: 200px;
+   padding: 25px;
+   color: #525252;
+ }
+
+.icon_div {
+  float:left;
+  margin-right: 10px;
+  width:30px;
+  text-align: center
+}
+.icon_style {
+  vertical-align:middle;
+  margin-top: -2px;
+}
+
+.stu-name {
+  color: #535253;
+  font-weight: bold;
+}
+
+.stu-name-value {
+  color: #287EE2;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.time {
+  margin-top: 25px;
+}
+
+.score {
+  text-align: center;
+  font-size: 19px;
+  color: #525252;
+  height: 25px;
+}
+
+.line-3 {
+  border:0.5px solid #C1DAFB;
+}
+
+.assessment {
+  margin-top: 10px;
+}
+
+.assessment .left {
+  font-size: 17px;
+}
+
+.assessment .right {
+  margin-top: -2px;
+  color: #525252;
+  font-size: 12px;
+  line-height: 27px;
+}
+
+.btn-div{
+  margin-top: 25px;
+  display: block;
+  text-align: center;
+}
+
+.btn-div btn{
+  background-color: #79B6F8;
+  border-color: #79B6F8
+}
+
+.physical-unnormal {
+  color: red;
+}
+
+// ===========================
+

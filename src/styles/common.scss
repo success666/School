@@ -1,0 +1,180 @@
+.el-row {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.el-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
+
+.collapse {
+  margin-top: 15px;
+}
+
+.collapse-title-left {
+  margin-left: 25px;
+}
+
+.collapse-title-right {
+  margin-right: 15px;
+  float: right;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.custom {
+
+}
+
+.custom .table{
+  margin-top: 10px;
+  width: 100%;
+  border-color: #F8F8F8;
+  border: 3px #f8f8f8 solid;
+  border-spacing: 0px;
+  text-align: center;
+}
+
+.custom .tbody{
+}
+
+.custom tr{
+  background-color: #F8F8F8;
+  border: none;
+  height: 40px;
+}
+
+.custom th{
+  background-color: #F8F8F8;
+  border: none;
+}
+
+.custom td{
+  border: none;
+  background-color: white;
+  word-wrap: break-word;
+}
+
+.font {
+  color: #525252;
+}
+
+.customInput-equipmentForm{
+
+}
+
+.input-div{
+  padding: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+.input{
+  width: 80px;
+}
+
+.save-btn {
+  background-color: #78B6F8;
+  border-color: #78B6F8;
+}
+
+.table-title {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom table th {
+  font-family: PingFang-SC-Medium;
+  font-size: 16px;
+  color: #525252;
+  height: 34px;
+}
+
+.custom table td {
+  font-family: PingFang-SC-Medium;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+
+.icon_style {
+  vertical-align:middle;
+  margin-top: -2px;
+}
+
+.tips {
+  color: gray !important;
+}
+
+.progress {
+  opacity: 0.6;
+  -moz-opacity: 0.6;
+}
+
+.progress-inner-text {
+  position: absolute;
+  z-index: 999;
+}
+
+.progress-inner-color {
+  color: grey;
+  font-size: 14px;
+}
+
+.progress-inner-color-red {
+  color: red;
+  font-size: 14px;
+}
+.title-top {
+  font-size: 24px;
+  font-family: "Microsoft YaHei";
+  font-weight: 600;
+  text-align: center;
+  color: #333333;
+}
+.pre p img{width: 100%}
+
+.el-table {
+  td,
+  th.is-leaf {
+    border-bottom: 1px solid #ebeef5;
+  }
+}
+.el-table__body {
+  tr.el-table__row {
+    &::hover {
+      background: #ebeef5;
+    }
+  }
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #e3e7ea;
+  color: #606266;
+}
+td.columnName {
+  cursor: pointer;
+  color: #3c8dbc !important;
+}

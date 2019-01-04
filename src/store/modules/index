@@ -1,0 +1,359 @@
+import { course, calorieExpend, sportTimeRanking, strengthSportTime, devicePosition, extracurricularExercise, getStatisticsDeviceMessage, homework, notAttend, sportTime, lessThanOneHour, moreThanOneHour, shoolYearDtl, classExcellentRate, schoolQuaRate, stuUnquaRate, schoolExcellentRate, classQuaRate } from '@/api/index'
+import { getToken } from '@/utils/auth'
+import { Message } from 'element-ui'
+
+const index = {
+  state: {
+    token: getToken()
+  },
+  mutations: {
+    SET_TOKEN: (state, token) => {
+      state.token = token
+    }
+  },
+  actions: {
+    // 实时课堂
+    Course({ commit }) {
+      return new Promise((resolve, reject) => {
+        course().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 课堂运动消耗（平均）
+    CalorieExpend({ commit }) {
+      return new Promise((resolve, reject) => {
+        calorieExpend().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 学生课堂实时运动数据（前10名学生的运动时长）
+    SportTimeRanking({ commit }) {
+      return new Promise((resolve, reject) => {
+        sportTimeRanking().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 本周不同强度运动时长
+    StrengthSportTime({ commit }) {
+      return new Promise((resolve, reject) => {
+        strengthSportTime().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 学校设备使用位置
+    DevicePosition({ commit }) {
+      return new Promise((resolve, reject) => {
+        devicePosition().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 本周课外锻炼
+    ExtracurricularExercise({ commit }) {
+      return new Promise((resolve, reject) => {
+        extracurricularExercise().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 统计设备信息
+    GetStatisticsDeviceMessage({ commit }) {
+      return new Promise((resolve, reject) => {
+        getStatisticsDeviceMessage().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 体育作业
+    Homework({ commit }) {
+      return new Promise((resolve, reject) => {
+        homework().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 未参加学生人数
+    NotAttend({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        notAttend(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 运动时长（前一天）
+    SportTime({ commit }) {
+      return new Promise((resolve, reject) => {
+        sportTime().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 运动未超过1小时学生
+    LessThanOneHour({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        lessThanOneHour(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 运动超过1小时学生
+    MoreThanOneHour({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        moreThanOneHour(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    SchoolYearDtl({ commit }) {
+      return new Promise((resolve, reject) => {
+        shoolYearDtl().then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 优良率低于25%的班级
+    ClassExcellentRate({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        classExcellentRate(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 全区学校合格率
+    SchoolQuaRate({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        schoolQuaRate(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 学生综合体质不合格的人数
+    StuUnquaRate({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        stuUnquaRate(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 全区学校优良率
+    SchoolExcellentRate({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        schoolExcellentRate(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    },
+    // 低于合格率94%的班级列表
+    ClassQuaRate({ commit }, param) {
+      return new Promise((resolve, reject) => {
+        classQuaRate(param).then(response => {
+          if (response.status.code === 200 || response.status.code === 0) {
+            resolve(response)
+          } else {
+            Message({
+              message: response.status.msg,
+              type: 'error',
+              duration: 2 * 1000
+            })
+            reject(response)
+          }
+        }).catch(error => {
+          reject(error)
+        })
+      })
+    }
+  }
+}
+
+export default index
